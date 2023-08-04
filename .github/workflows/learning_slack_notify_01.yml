@@ -19,14 +19,8 @@ jobs:
     - name: Notify slack
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_SECRET_KEY }}
-        SLACK_COLOR: '#3278BD'
-        SLACK_ICON: https://upload.wikimedia.org/wikipedia/commons/6/68/NoxttonBot.png?size=48
-        SLACK_MESSAGE: 'Post Content :rocket:'
         
       uses: pullreminders/slack-action@master
       with:
-       args: '{\"channel\":\"C05L0RYE6MT\",\"blocks\": \"text\":\"*Hello* :rocket: world from SK\"}'
-    #status: ${{ job.status }}
-    #version: '1.0.0'
-    #platform: 'Android'
-    #channel: '#workflows'
+        args: '{\"channel\":\"C05L0RYE6MT\",\"text\":\"*Hello* :rocket: world from SK\"}'
+       # args: '{\"channel\":\"C05L0RYE6MT\",\"blocks\": \"text\":\"*Hello* :rocket: world from SK\"}'
