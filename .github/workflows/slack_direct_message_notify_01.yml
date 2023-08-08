@@ -22,7 +22,7 @@ jobs:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_SECRET_KEY }}
         with:
           # custom message to send to slack
-         args: '{\"channel\":\"C05L0RYE6MT\",\"text\":\"SK :rocket:\"}'
-         
+         # args: '{\"channel\":\"C05L0RYE6MT\",\"text\":\"SK :rocket:\"}'
+           args: '{\"channel\":\"C05L0RYE6MT\",\"text\":\"Danny Torrence left a 5 star review for your property.\",\"blocks\":[{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"Danny Torrence left the following review for your property:\"}},{\"type\":\"section\",\"block_id\":\"section567\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"<https://example.com|Overlook Hotel> - :star: :star: :star: :star: :star:  Doors had too many axe holes, guest in room 237 was far too rowdy, whole place felt stuck in the 1920s.\"},\"accessory\":{\"type\":\"image\",\"image_url\":\"https://images.unsplash.com/photo-1568394824200-457c8c3cb6dc?ixid=M3wxMjA3fDB8MXxhbGx8NXx8fHx8fDJ8fDE2OTE0OTYwMzh8&ixlib=rb-4.0.3&dpr=2&auto=format&fit=crop&w=120&h=200&q=60\",\"alt_text\":\"Haunted hotel image\"}},{\"type\":\"section\",\"block_id\":\"section789\",\"fields\":[{\"type\":\"mrkdwn\",\"text\":\"*Average Rating*-5.0\"}]}]}'
         # Pick up events even if the job is success.
         if: success()
