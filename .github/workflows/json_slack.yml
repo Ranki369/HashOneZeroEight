@@ -17,38 +17,17 @@ jobs:
           channel-id: '#general'
           # This data can be any valid JSON from a previous step in the GitHub Action
           payload: |
-            { 
-              "text": "*Code Coverage Task * - redefined",
-            	"blocks": [
-                      {
-                          "type": "section",
-                          "text": {
-                              "type": "mrkdwn",
-                              "text": "Hi Pay-Pay :wave:"
-                          }
-                      },
-                      {
-                          "type": "section",
-                          "text": {
-                              "type": "mrkdwn",
-                              "text": "Varun this works! App helps you to stay up-to-date with your meetings and events right here within Slack. These are just a few things which you will be able to do:"
-                          }
-                      },
-                      {
-                          "type": "section",
-                          "text": {
-                              "type": "mrkdwn",
-                              "text": "• Slack Web Hook  \n • Slack Github Actions \n • Gradle Tasks to communicate to Slack with curl cmd"
-                          }
-                      },
-                      {
-                          "type": "section",
-                          "text": {
-                              "type": "mrkdwn",
-                              "text": "But before you can do all these amazing things, we need you to connect your Slack Channel to see the changes in App."
-                          }
-                      },
-                  ]
-            }
+            	 {
+                "text": "Code coverage Report below 95 percent",
+                "blocks": [
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "below < 95 percent"
+                    }
+                  }
+                ]
+              }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
