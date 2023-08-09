@@ -1,4 +1,3 @@
-
 name: Android CI
 
 on:
@@ -30,7 +29,8 @@ jobs:
     - name: Send custom JSON data to Slack workflow
       id: slack
       uses: slackapi/slack-github-action@v1.24.0
-      with: 
+      with:
+        channel-id: '#general'
         payload-file-path: "./payload.json"
       env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
