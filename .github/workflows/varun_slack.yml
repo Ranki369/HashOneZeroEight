@@ -14,9 +14,8 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.24.0
         with:
-          - uses: alonsohki/slack-webhook-payload@v1
-          slack-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          content: '{ text: "alonsohki library used message" }'
-            
+          channel-id: '#general'
+          payload-file-path: "./payload.json"
+        
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
