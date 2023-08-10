@@ -15,7 +15,6 @@ jobs:
         uses: slackapi/slack-github-action@v1.24.0
         with:
           # This data can be any valid JSON from a previous step in the GitHub Action
-          channel-id: '#general'
           # For posting a simple plain text message
           payload: |
               {
