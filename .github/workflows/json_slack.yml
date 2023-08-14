@@ -18,7 +18,7 @@ jobs:
           # For posting a simple plain text message
 
         with:
-          payload-file-path: "./.github/workflows/test_small_paypoad.json"
+          payload-file-path: "./.github/workflows/paypoad.json"
           
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
