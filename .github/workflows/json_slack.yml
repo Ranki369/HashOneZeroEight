@@ -18,6 +18,7 @@ jobs:
           # For posting a simple plain text message
           uses: slackapi/slack-github-action@v1.24.0
       with: 
+        channel-id: "#general"
         payload-file-path: "./.github/workflows/test_small_paypoad.json"
           
         env:
