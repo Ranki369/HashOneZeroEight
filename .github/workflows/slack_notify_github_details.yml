@@ -35,7 +35,7 @@ jobs:
           # For posting a simple plain text message
           uses: slackapi/slack-github-action@v1.24.0
       with: 
-        payload-file-path: "./.github/workflows/test_small_paypoad.json"
+        payload-file-path: "./.github/workflows/test_small_payload.json"
           
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
