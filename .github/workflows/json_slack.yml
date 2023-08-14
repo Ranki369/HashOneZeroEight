@@ -17,9 +17,8 @@ jobs:
           # This data can be any valid JSON from a previous step in the GitHub Action
           # For posting a simple plain text message
 
-      with: 
-        channel-id: "#general"
-        payload-file-path: "./.github/workflows/test_small_paypoad.json"
+        with:
+          payload-file-path: "./.github/workflows/test_small_paypoad.json"
           
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
