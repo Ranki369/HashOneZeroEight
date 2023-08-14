@@ -16,19 +16,9 @@ jobs:
         with:
           # This data can be any valid JSON from a previous step in the GitHub Action
           # For posting a simple plain text message
-          payload: |
-              {
-                "text": "Code coverage Report below 95 percent",
-                "blocks": [
-                  {
-                    "type": "section",
-                    "text": {
-                      "type": "mrkdwn",
-                      "text": "below 95 percent"
-                    }
-                  }
-                ]
-              }
+          uses: slackapi/slack-github-action@v1.24.0
+      with: 
+        payload-file-path: "./small_payload.json"
           
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
