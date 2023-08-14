@@ -1,0 +1,12 @@
+{
+    "text": "Text Payload test message",
+    "blocks": [
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "Text Payload test  - below 95 percent"
+            }
+        }
+    ]
+}
