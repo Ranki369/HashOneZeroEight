@@ -25,7 +25,6 @@ jobs:
 
     # Only run this workflow if target is main branch on pull_request event
     if: ${{ github.base_ref == 'main' && github.event_name == 'pull_request' }}
-
     steps:
 
       - uses: pullreminders/slack-action@master

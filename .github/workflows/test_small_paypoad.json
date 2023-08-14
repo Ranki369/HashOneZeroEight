@@ -1,0 +1,12 @@
+{
+    "text": "Text Payload test message",
+    "blocks": [
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "Payload file test - 95% covrage"
+            }
+        }
+    ]
+}
