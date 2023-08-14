@@ -13,10 +13,10 @@ jobs:
       - name: Send custom JSON data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.24.0
-        with:
+        
           # This data can be any valid JSON from a previous step in the GitHub Action
           # For posting a simple plain text message
-          uses: slackapi/slack-github-action@v1.24.0
+
       with: 
         channel-id: "#general"
         payload-file-path: "./.github/workflows/test_small_paypoad.json"
