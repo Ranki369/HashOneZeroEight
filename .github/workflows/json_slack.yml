@@ -21,6 +21,10 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
 
+        # Use the output from the `slackIncoming` step
+      - name: Check Action output is not empty
+        run: test -n "${{ steps.slack-notify-action.outputs.time }}"
+
   send-json-data-slack-payload-path:
 
     runs-on: ubuntu-latest
