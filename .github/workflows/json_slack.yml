@@ -21,6 +21,7 @@ jobs:
         # payload: "{\"key\":\"value\",\"foo\":\"bar\"}"
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_SECRET_KEY }}
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
     # Use the output from the `slackToken` step
     - name: Check Action output is not empty
@@ -38,6 +39,7 @@ jobs:
             }
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_SECRET_KEY }}
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
   integration_test_webhook:
     runs-on: ubuntu-latest
