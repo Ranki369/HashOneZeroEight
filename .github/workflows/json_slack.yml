@@ -7,7 +7,8 @@ jobs:
     steps:
     - name: Send GitHub trigger payload to Slack Workflow Builder
       id: slackPayloadFile
-      uses: ./
+      uses: slackapi/slack-github-action@v1.24.0
+      
       with:
         payload-file-path: ./resources/payload_1.json
       env:
