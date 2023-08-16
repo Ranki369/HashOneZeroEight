@@ -13,20 +13,9 @@ jobs:
       - name: Send custom JSON data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.24.0
-        with:
-          # This data can be any valid JSON from a previous step in the GitHub Action
-          payload: |
-            {
-              "text": "Currently testing a small message with reduced payload",
-            	"blocks": [
-            		{
-            			"type": "section",
-            			"text": {
-            				"type": "mrkdwn",
-            				"text": "You have a new request:\n*<fakeLink.toEmployeeProfile.com|Fred Enriquez - New device request>*"
-            			}
-            		}
-            	]
-            }
+      
+        with: 
+          uses: ./
+          payload-file-path: "resources/payload_1.json"
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
