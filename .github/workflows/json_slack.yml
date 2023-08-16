@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Send custom JSON data to Slack workflow
+      - name: Send Json data to Slack workflow
         id: slack
-        uses: ./
+        uses: slackapi/slack-github-action@v1.24.0
       
         with: 
-          payload-file-path: resources/other_layer.json
+          payload-file-path: ../resources/other_layer.json
         env:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
