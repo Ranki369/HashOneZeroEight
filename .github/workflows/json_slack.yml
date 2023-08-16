@@ -5,7 +5,23 @@ on:
     branches: '**'   # [ "main" ]
 
 jobs:
-  SendJSONData:
+
+  test-json-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: send json payload
+        id: slack-notify-action
+        uses: slackapi/slack-github-action@v1.24.0
+
+        with:
+          # block kit payload
+          payload: "{\"text\":\"Incoming Webhook test for slack send\", \"blocks\":[{\"type\":\"section\",\"text\":{\"type\":\"plain_text\",\"text\":\"A post by Slack Send GitHub Action. Testing Incoming webhooks\",\"emoji\":true}}]}"
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+
+  send-json-data-slack-payload-path:
 
     runs-on: ubuntu-latest
     
