@@ -1,0 +1,44 @@
+{
+	"blocks": [
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*Module*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*Covered | Minimum Coverage | Status |*"
+				}
+			]
+		},
+		{
+			"type": "divider"
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*`repository`*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*Service*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 99% | :trollface:"
+				}
+			]
+		},
+	]
+}
