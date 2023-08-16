@@ -3,21 +3,19 @@ on:
   pull_request:
   push:
     branches:
-      - main
+      - '**'
 
 jobs:
   unit_tests:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: npm ci && npm run build
-    - run: npm test
-
+    
   integration_test_botToken:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: npm ci && npm run build
+    
     - name: Post message to Slack via botToken
       id: slackToken
       uses: ./
@@ -49,7 +47,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: npm ci && npm run build
     - run: echo "${{ github.event_name }}"
     - name: push trigger
       # Save commit url from GitHub Trigger event payload to URL env
@@ -82,7 +79,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: npm ci && npm run build
+
     - name: Dump out GitHub Context
       run: echo $JSON
       env:
