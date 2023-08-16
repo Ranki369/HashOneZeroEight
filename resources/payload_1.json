@@ -1,0 +1,344 @@
+{
+	"blocks": [
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*Module*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*Covered% | Minimum Coverage% | Status |*"
+				}
+			]
+		},
+		{
+			"type": "divider"
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-auth*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-balance*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-balance-history*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-home*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-kyc*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-map*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-metrics*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-notification-status*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-oauth*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-p2pchat*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-p2pmoneytransfer*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-payment*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-payment-history*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-payment-method*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-payout*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-preauth*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-profile*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-push-notification*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-reauth*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-service-availability*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-service-linkage*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-signout*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-softbank*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-topup*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-tpoint*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-usecase*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*feature-domain-yconnect*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "0.00% | 95% | :trollface:"
+				}
+			]
+		},
+	]
+}
