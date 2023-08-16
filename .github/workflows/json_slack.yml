@@ -16,12 +16,13 @@ jobs:
       id: slackToken
       uses: ./
       with:
-        channel-id: 'C05L0RYE6MT'
+        channel-id: "C05L0RYE6MT"
         slack-message: 'CI Post from slack-send GitHub Action! Succeeded!!'
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         # payload: "{\"key\":\"value\",\"foo\":\"bar\"}"
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_SECRET_KEY }}
-        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        
 
     # Use the output from the `slackToken` step
     - name: Check Action output is not empty
@@ -31,7 +32,7 @@ jobs:
       id: slackThreadResponse
       uses: ./
       with:
-        channel-id: 'C05L0RYE6MT'
+        channel-id: "C05L0RYE6MT"
         payload: |
             {
               "text": "This message should be posted as a response in thread",
