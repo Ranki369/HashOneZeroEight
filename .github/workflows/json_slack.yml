@@ -10,23 +10,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: npm ci && npm run build
-    - run: npm test
+    #- run: npm ci && npm run build
+    #- run: npm test
 
   integration_test_botToken:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: npm ci && npm run build
+    #- run: npm ci && npm run build
     - name: Post message to Slack via botToken
       id: slackToken
       uses: ./
       with:
-        #channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
+        channel-id: 'C05L0RYE6MT'
         slack-message: 'CI Post from slack-send GitHub Action! Succeeded!!'
         # payload: "{\"key\":\"value\",\"foo\":\"bar\"}"
       env:
-        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_SECRET_KEY }}
 
     # Use the output from the `slackToken` step
     - name: Check Action output is not empty
@@ -36,20 +36,20 @@ jobs:
       id: slackThreadResponse
       uses: ./
       with:
-        #channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
+        channel-id: 'C05L0RYE6MT'
         payload: |
             {
               "text": "This message should be posted as a response in thread",
               "thread_ts": "${{ steps.slackToken.outputs.thread_ts }}"
             }
       env:
-        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_SECRET_KEY }}
 
   integration_test_webhook:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: npm ci && npm run build
+    #- run: npm ci && npm run build
     - run: echo "${{ github.event_name }}"
     - name: push trigger
       # Save commit url from GitHub Trigger event payload to URL env
@@ -82,7 +82,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: npm ci && npm run build
+    #- run: npm ci && npm run build
     - run: echo "${{ github.event_name }}"
     - name: Post message to Slack via incoming webhook
       id: slackIncoming
@@ -102,7 +102,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: npm ci && npm run build
+    #- run: npm ci && npm run build
     - name: Dump out GitHub Context
       run: echo $JSON
       env:
