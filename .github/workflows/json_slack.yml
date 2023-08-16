@@ -9,6 +9,6 @@ jobs:
       id: slack
       uses: slackapi/slack-github-action@v1.24.0
       with:
-        payload-file-path: small_msg.json
+        payload-file-path: '../small_msg.json'
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
