@@ -6,9 +6,12 @@ jobs:
     name: New push to repo
     steps:
     - name: Send GitHub trigger payload to Slack Workflow Builder
-      id: slack
-      uses: slackapi/slack-github-action@v1.24.0
+      id: slackPayloadFile
+      uses: ./
       with:
-        payload-file-path: '../small_msg.json'
+        payload-file-path: ./resources/payload-notification.json
       env:
-        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_INCOMING_WEBHOOK_URL }}
+        SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+        JOB_STATUS: ${{ job.status }}
+        ATTACHMENT_COLOR: ${{ (job.status == 'success' && 'good') || (job.status == 'failure' && 'danger') || 'warning' }}
