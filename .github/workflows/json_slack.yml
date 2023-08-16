@@ -1,32 +1,17 @@
-on:
-  push:
-    branches: '**'   # [ "main" ]
-  pull_request:
-    branches: '**'   # [ "main" ]
+on: [push]
 
 jobs:
-  SendJSONData:
-
+  new_push_job:
     runs-on: ubuntu-latest
-    
+    name: New push to repo
     steps:
-      - name: Send custom JSON data to Slack workflow
-        id: slack
-        uses: slackapi/slack-github-action@v1.24.0
-        with:
-          # This data can be any valid JSON from a previous step in the GitHub Action
-          payload: |
-            {
-              "text": "Currently testing a small message with reduced payload",
-            	"blocks": [
-            		{
-            			"type": "section",
-            			"text": {
-            				"type": "mrkdwn",
-            				"text": "You have a new request:\n*<fakeLink.toEmployeeProfile.com|Fred Enriquez - New device request>*"
-            			}
-            		}
-            	]
-            }
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+    - name: Send GitHub trigger payload to Slack Workflow Builder
+      id: slackPayloadFile
+      uses: ./
+      with:
+        payload-file-path: ./resources/payload_1.json
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_INCOMING_WEBHOOK_URL }}
+        SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+        JOB_STATUS: ${{ job.status }}
+        ATTACHMENT_COLOR: ${{ (job.status == 'success' && 'good') || (job.status == 'failure' && 'danger') || 'warning' }}
