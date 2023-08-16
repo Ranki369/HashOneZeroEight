@@ -11,7 +11,7 @@ jobs:
     
     steps:
       - name: Update github workflows
-        run: cp -r reports/* .github/workflows
+        run: cp -r ./reports/* .github/workflows
         
       - name: Send custom JSON data to Slack workflow
         id: slack
