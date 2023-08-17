@@ -22,15 +22,14 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-    - name: Build with Gradle
-      run: ./gradlew build
+    #- name: Build with Gradle
+     # run: ./gradlew build
 
     - name: Send Json data to Slack workflow
-      id: slack
       uses: slackapi/slack-github-action@v1.24.0
       
       with:
-        channel-id: "C05L0RQ1B8V"
+        channel-id: "#general"
         payload-file-path: "resources/payload_1.json"
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
