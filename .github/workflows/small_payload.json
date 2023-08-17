@@ -1,12 +1,1 @@
-{
-    "text": "Code coverage Report below 95 percent",
-    "blocks": [
-        {
-            "type": "section",
-            "text": {
-                "type": "mrkdwn",
-                "text": "below 95 percent"
-            }
-        }
-    ]
-}
+"{\"text\":\"Incoming Webhook test for slack send\", \"blocks\":[{\"type\":\"section\",\"text\":{\"type\":\"plain_text\",\"text\":\"A post by Slack Send GitHub Action. Testing Incoming webhooks from a file formatted in a *single* line\",\"emoji\":true}}]}"
