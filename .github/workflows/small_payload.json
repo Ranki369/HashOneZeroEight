@@ -1,5 +1,5 @@
 {
-  "text ":"sending text and rich UI blocks in a json format ",
+  	"text":	"sending text and rich UI blocks in a json format",
 	"blocks": [
 		{
 			"type": "section",
