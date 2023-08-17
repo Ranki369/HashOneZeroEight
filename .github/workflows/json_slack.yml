@@ -29,6 +29,7 @@ jobs:
 
     runs-on: ubuntu-latest
     
+    
     steps:
       - name: Send Json data to Slack workflow
         id: slack
@@ -37,4 +38,5 @@ jobs:
         with: 
           payload-file-path: "../resources/other_layer.json"
         env:
+            run: npm init
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
