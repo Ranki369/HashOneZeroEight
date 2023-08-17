@@ -25,18 +25,24 @@ jobs:
       - name: Check Action output is not empty
         run: test -n "${{ steps.slack-notify-action.outputs.time }}"
 
+  unit_tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: npm init
+    - run: npm ci && npm run build
+    - run: npm test
+    
   send-json-data-slack-payload-path:
 
     runs-on: ubuntu-latest
-    
-    
+   
     steps:
       - name: Send Json data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.24.0
       
         with: 
-          payload-file-path: "../resources/other_layer.json"
+          payload-file-path: "resources/payload_1.json"
         env:
-            run: npm init
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
