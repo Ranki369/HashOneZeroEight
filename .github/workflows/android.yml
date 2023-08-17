@@ -25,11 +25,11 @@ jobs:
     #- name: Build with Gradle
      # run: ./gradlew build
 
-    - name: Send Json data to Slack workflow
+    - name: Send data to webhook-bot in #general channel 
       uses: slackapi/slack-github-action@v1.24.0
       
       with:
-        channel-id: "#general"
+        # channel-id: "#general"
         payload-file-path: "resources/payload_1.json"
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
