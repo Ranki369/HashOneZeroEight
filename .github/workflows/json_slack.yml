@@ -10,32 +10,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: send json payload
-        id: slack-notify-action
-        uses: slackapi/slack-github-action@v1.24.0
+    - uses: actions/checkout@v3
+    - name: set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: gradle
 
-        with:
-          # block kit payload
-          payload: "{\"text\":\"Incoming Webhook test for slack send\", \"blocks\":[{\"type\":\"section\",\"text\":{\"type\":\"plain_text\",\"text\":\"A post by Slack Send GitHub Action. Testing Incoming webhooks\",\"emoji\":true}}]}"
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    #- name: Build with Gradle
+     # run: ./gradlew build
 
-        # Use the output from the `slackIncoming` step
-      - name: Check Action output is not empty
-        run: test -n "${{ steps.slack-notify-action.outputs.time }}"
-
-  send-json-data-slack-payload-path:
-
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Send Json data to Slack workflow
-        id: slack
-        uses: slackapi/slack-github-action@v1.24.0
+    - name: Send data to webhook-bot in #general channel 
+      uses: slackapi/slack-github-action@v1.24.0
       
-        with: 
-          payload-file-path: ../resources/other_layer.json
-        env:
+      with:
+        # channel-id: "#general"
+        # payload-file-path: "resources/payload_1.json"
+        payload-file-path: ".github/workflows/small_payload.json"
+      env:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
             SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
