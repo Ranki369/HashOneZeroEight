@@ -28,8 +28,12 @@ jobs:
       
       with:
         # channel-id: "#general"
-        # payload-file-path: "resources/payload_1.json"
-        payload-file-path: ".github/workflows/one_line.json"
+
+        # payload-file-path: ".github/workflows/one_line.json"
+
+        payload: "{\"pay2 author\":\"${{ github.event.sender.login }}\",\"pay2 url\":\"${{ env.URL}}\", \"pay2 repoName\":\"${{ github.event.repository.full_name }}\", \"pay2 status\":\"${{ job.status }}\"}"
+
+
       env:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
             SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
