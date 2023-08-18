@@ -1,7 +1,7 @@
 import requests
 import json
 
-test_file = open("/resources/other_layer.json")
+test_file = open("resources/payload_1.json")
 json_data = json.load(test_file)
 headers =  {"Content-Type":"application/json"}
 print("JSON string = ", json_data)
