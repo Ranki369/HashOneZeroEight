@@ -18,7 +18,7 @@ jobs:
       id: slackPayloadFile
       uses: ./
       with:
-        payload-file-path: ./.github/workflow/small_payload.json
+        payload-file-path: /home/runner/work/_temp/_github_workflow/small_payload.json
       
       env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
