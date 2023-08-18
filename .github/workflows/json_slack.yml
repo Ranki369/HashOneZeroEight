@@ -12,9 +12,9 @@ jobs:
     - name: Post message to Slack with Payload path
       id: slackPayloadFile
       uses: ./
-      slack-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
       with:
         payload-file-path: /home/runner/work/_temp/_github_workflow/small_payload.json
       
       env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
