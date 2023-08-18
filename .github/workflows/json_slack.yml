@@ -29,7 +29,7 @@ jobs:
       with:
         # channel-id: "#general"
 
-        payload-file-path: ".github/workflows/one_line.json"
+        payload-file-path: ".github/workflows/small_payload.json"
 
       #  payload: "{\"text\":\"file 3 Payload test message\",\"blocks\":[{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"fle 3 Payload test  - below 95 percent\"}}]}"
 
