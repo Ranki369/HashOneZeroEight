@@ -29,7 +29,7 @@ jobs:
       with:
         # channel-id: "#general"
         # payload-file-path: "resources/payload_1.json"
-        payload-file-path: ".github/workflows/small_payload.json"
+        payload-file-path: ".github/workflows/one_line.json"
       env:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
             SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
