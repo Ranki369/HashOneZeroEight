@@ -1,88 +1,88 @@
-{
-  	"text":	"sending text and rich UI blocks in a json format",
-	"blocks": [
-		{
-			"type": "section",
-			"text": {
-				"type": "mrkdwn",
-				"text": "Hello, Assistant to the Regional Manager Dwight! *Michael Scott* wants to know where you'd like to take the Paper Company investors to dinner tonight.\n\n *Please select a restaurant:*"
-			}
-		},
-		{
-			"type": "divider"
-		},
-		{
-			"type": "section",
-			"text": {
-				"type": "mrkdwn",
-				"text": "*Farmhouse Thai Cuisine*\n:star::star::star::star: 1528 reviews\n They do have some vegan options, like the roti and curry, plus they have a ton of salad stuff and noodles can be ordered without meat!! They have something for everyone here"
-			},
-			"accessory": {
-				"type": "image",
-				"image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/c7ed05m9lC2EmA3Aruue7A/o.jpg",
-				"alt_text": "alt text for image"
-			}
-		},
-		{
-			"type": "section",
-			"text": {
-				"type": "mrkdwn",
-				"text": "*Kin Khao*\n:star::star::star::star: 1638 reviews\n The sticky rice also goes wonderfully with the caramelized pork belly, which is absolutely melt-in-your-mouth and so soft."
-			},
-			"accessory": {
-				"type": "image",
-				"image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/korel-1YjNtFtJlMTaC26A/o.jpg",
-				"alt_text": "alt text for image"
-			}
-		},
-		{
-			"type": "section",
-			"text": {
-				"type": "mrkdwn",
-				"text": "*Ler Ros*\n:star::star::star::star: 2082 reviews\n I would really recommend the  Yum Koh Moo Yang - Spicy lime dressing and roasted quick marinated pork shoulder, basil leaves, chili & rice powder."
-			},
-			"accessory": {
-				"type": "image",
-				"image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/DawwNigKJ2ckPeDeDM7jAg/o.jpg",
-				"alt_text": "alt text for image"
-			}
-		},
-		{
-			"type": "divider"
-		},
-		{
-			"type": "actions",
-			"elements": [
-				{
-					"type": "button",
-					"text": {
-						"type": "plain_text",
-						"text": "Farmhouse",
-						"emoji": true
-					},
-					"value": "click_me_123"
-				},
-				{
-					"type": "button",
-					"text": {
-						"type": "plain_text",
-						"text": "Kin Khao",
-						"emoji": true
-					},
-					"value": "click_me_123",
-					"url": "https://google.com"
-				},
-				{
-					"type": "button",
-					"text": {
-						"type": "plain_text",
-						"text": "Ler Ros",
-						"emoji": true
-					},
-					"value": "click_me_123",
-					"url": "https://google.com"
-				}
-			]
-		}
-	]
-}
+"{\n" +
+      "  \t\"text\":\t\"24 sending text and rich UI blocks in a json format\",\n" +
+      "\t\"blocks\": [\n" +
+      "\t\t{\n" +
+      "\t\t\t\"type\": \"section\",\n" +
+      "\t\t\t\"text\": {\n" +
+      "\t\t\t\t\"type\": \"mrkdwn\",\n" +
+      "\t\t\t\t\"text\": \"Hello, 24 Assistant to the Regional Manager Dwight! *Michael Scott* wants to know where you'd like to take the Paper Company investors to dinner tonight.\\n\\n *Please select a restaurant:*\"\n" +
+      "\t\t\t}\n" +
+      "\t\t},\n" +
+      "\t\t{\n" +
+      "\t\t\t\"type\": \"divider\"\n" +
+      "\t\t},\n" +
+      "\t\t{\n" +
+      "\t\t\t\"type\": \"section\",\n" +
+      "\t\t\t\"text\": {\n" +
+      "\t\t\t\t\"type\": \"mrkdwn\",\n" +
+      "\t\t\t\t\"text\": \"*Farmhouse Thai Cuisine*\\n:star::star::star::star: 1528 reviews\\n They do have some vegan options, like the roti and curry, plus they have a ton of salad stuff and noodles can be ordered without meat!! They have something for everyone here\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t\"accessory\": {\n" +
+      "\t\t\t\t\"type\": \"image\",\n" +
+      "\t\t\t\t\"image_url\": \"https://s3-media3.fl.yelpcdn.com/bphoto/c7ed05m9lC2EmA3Aruue7A/o.jpg\",\n" +
+      "\t\t\t\t\"alt_text\": \"alt text for image\"\n" +
+      "\t\t\t}\n" +
+      "\t\t},\n" +
+      "\t\t{\n" +
+      "\t\t\t\"type\": \"section\",\n" +
+      "\t\t\t\"text\": {\n" +
+      "\t\t\t\t\"type\": \"mrkdwn\",\n" +
+      "\t\t\t\t\"text\": \"*Kin Khao*\\n:star::star::star::star: 1638 reviews\\n The sticky rice also goes wonderfully with the caramelized pork belly, which is absolutely melt-in-your-mouth and so soft.\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t\"accessory\": {\n" +
+      "\t\t\t\t\"type\": \"image\",\n" +
+      "\t\t\t\t\"image_url\": \"https://s3-media2.fl.yelpcdn.com/bphoto/korel-1YjNtFtJlMTaC26A/o.jpg\",\n" +
+      "\t\t\t\t\"alt_text\": \"alt text for image\"\n" +
+      "\t\t\t}\n" +
+      "\t\t},\n" +
+      "\t\t{\n" +
+      "\t\t\t\"type\": \"section\",\n" +
+      "\t\t\t\"text\": {\n" +
+      "\t\t\t\t\"type\": \"mrkdwn\",\n" +
+      "\t\t\t\t\"text\": \"*Ler Ros*\\n:star::star::star::star: 2082 reviews\\n I would really recommend the  Yum Koh Moo Yang - Spicy lime dressing and roasted quick marinated pork shoulder, basil leaves, chili & rice powder.\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t\"accessory\": {\n" +
+      "\t\t\t\t\"type\": \"image\",\n" +
+      "\t\t\t\t\"image_url\": \"https://s3-media2.fl.yelpcdn.com/bphoto/DawwNigKJ2ckPeDeDM7jAg/o.jpg\",\n" +
+      "\t\t\t\t\"alt_text\": \"alt text for image\"\n" +
+      "\t\t\t}\n" +
+      "\t\t},\n" +
+      "\t\t{\n" +
+      "\t\t\t\"type\": \"divider\"\n" +
+      "\t\t},\n" +
+      "\t\t{\n" +
+      "\t\t\t\"type\": \"actions\",\n" +
+      "\t\t\t\"elements\": [\n" +
+      "\t\t\t\t{\n" +
+      "\t\t\t\t\t\"type\": \"button\",\n" +
+      "\t\t\t\t\t\"text\": {\n" +
+      "\t\t\t\t\t\t\"type\": \"plain_text\",\n" +
+      "\t\t\t\t\t\t\"text\": \"Farmhouse\",\n" +
+      "\t\t\t\t\t\t\"emoji\": true\n" +
+      "\t\t\t\t\t},\n" +
+      "\t\t\t\t\t\"value\": \"click_me_123\"\n" +
+      "\t\t\t\t},\n" +
+      "\t\t\t\t{\n" +
+      "\t\t\t\t\t\"type\": \"button\",\n" +
+      "\t\t\t\t\t\"text\": {\n" +
+      "\t\t\t\t\t\t\"type\": \"plain_text\",\n" +
+      "\t\t\t\t\t\t\"text\": \"Kin Khao\",\n" +
+      "\t\t\t\t\t\t\"emoji\": true\n" +
+      "\t\t\t\t\t},\n" +
+      "\t\t\t\t\t\"value\": \"click_me_123\",\n" +
+      "\t\t\t\t\t\"url\": \"https://google.com\"\n" +
+      "\t\t\t\t},\n" +
+      "\t\t\t\t{\n" +
+      "\t\t\t\t\t\"type\": \"button\",\n" +
+      "\t\t\t\t\t\"text\": {\n" +
+      "\t\t\t\t\t\t\"type\": \"plain_text\",\n" +
+      "\t\t\t\t\t\t\"text\": \"Ler Ros\",\n" +
+      "\t\t\t\t\t\t\"emoji\": true\n" +
+      "\t\t\t\t\t},\n" +
+      "\t\t\t\t\t\"value\": \"click_me_123\",\n" +
+      "\t\t\t\t\t\"url\": \"https://google.com\"\n" +
+      "\t\t\t\t}\n" +
+      "\t\t\t]\n" +
+      "\t\t}\n" +
+      "\t]\n" +
+      "}"
