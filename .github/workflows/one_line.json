@@ -1,3 +1,12 @@
 {
-    "text": "Text json Payload test message"
+    "text": "file 1 Payload test message",
+    "blocks": [
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "fle 1 Payload test  - below 95 percent"
+            }
+        }
+    ]
 }
