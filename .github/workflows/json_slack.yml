@@ -9,11 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: slackapi/slack-github-action@v1.24.0
-    - run: npm ci && npm run build
-    - name: Dump out GitHub Context
-      run: echo $JSON
-      env:
-        JSON: ${{ toJSON(github) }}
     - name: Post message to Slack with Payload path
       id: slackPayloadFile
       uses: ./
