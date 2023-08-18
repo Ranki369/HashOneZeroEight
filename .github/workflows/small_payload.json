@@ -1,1 +1,12 @@
-"{\"text\":\"file 3 Payload test message\",\"blocks\":[{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"fle 3 Payload test  - below 95 percent\"}}]}"
+{
+    "text": "file 2 Payload test message",
+    "blocks": [
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "fle 2 Payload test  - below 95 percent"
+            }
+        }
+    ]
+}
