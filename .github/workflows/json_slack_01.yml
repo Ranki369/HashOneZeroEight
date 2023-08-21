@@ -1,0 +1,36 @@
+on:
+  push:
+    branches: '**'   # [ "main" ]
+  pull_request:
+    branches: '**'   # [ "main" ]
+
+jobs:
+
+  test-json-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: gradle
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+      #- name: Build with Gradle
+      # run: ./gradlew build
+
+    - name: Send data to webhook-bot in #general channel 
+      uses: slackapi/slack-github-action@v1.24.0
+      
+      with:
+        payload-file-path: "resources/other_layer.json"
+        # payload takes precedence over payload-file-path so Be-aware
+        # payload: "{\"text\":\"file 3 Payload test message\",\"blocks\":[{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"fle 3 Payload test  - below 95 percent\"}}]}"
+
+      env:
+            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+            SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
